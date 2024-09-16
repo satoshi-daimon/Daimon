@@ -1,0 +1,678 @@
+@charset "UTF-8";
+
+/* body要素に対して以下のスタイルを設定 */
+body{
+    margin: 0;/* 要素の外側のマージン0にする */
+    font-family: 'メイリオ',
+    'Hiragana kaku Gothic Pro',sans-serif
+}
+
+/* ボックスの左右に確保する余白 */
+.box1,.box2, .box2-inner, .boxA,.box5,.box4-5,#comments,.mail,.copyright-inner{
+    padding-left: 10px;/* テキストの左側に余白を入れて調整 */
+    padding-right: 10px;/* テキストの右側に余白を入れて調整 */
+
+}
+
+.box{
+    background-color: #2196F3;   /* 背景色指定 */
+    position: absolute;          /* 位置指定 */
+    padding: 20px;               /* 余白指定 */
+    top:  0;                     /* 位置指定 */
+    bottom:  0;                  /* 位置指定 */
+    left:  0;                    /* 位置指定 */
+    right:  0;                   /* 位置指定 */
+    margin:  auto;               /* 中央寄せ */
+    width:  auto;               /* 幅指定 */
+    height: 80px;                /* 高さ指定 */
+}
+
+/* コピーライトの上に区切り線を入れる */
+    .copyright{
+        border-top: solid 1px #080808 ;
+    }
+
+/* ボックスの上下の間隔 */
+    .box1{
+        padding-top: 8px;/* 要素の上部に余白を確保します */
+        padding-bottom: 8px;/* 要素の下部に余白を確保します */
+    }
+
+    .box3{
+        padding-top: 40px;/* 要素の上部に余白を確保します */
+        padding-bottom: 30px;/* 要素の下部に余白を確保します */
+    }
+
+    .box4{
+        padding-top: 40px;/* 要素の上部に余白を確保します */
+        padding-bottom: 30px;/* 要素の下部に余白を確保します */
+    }
+
+    .box5{
+        padding-top: 15px;/* 要素の上部に余白を確保します */
+        padding-bottom: 15px;/* 要素の下部に余白を確保します */
+    }
+
+/* box3とbox4を横に並べる設定 */    
+    @media (min-width: 768px){
+        .boxA:after{
+            content: "";/* 要素の前または後に何も表示させない */
+            display: block; /*独立した要素をまとめた表示設定*/
+            clear: both;/* 要素が浮かんでいる要素と重ならない */
+        }
+
+        .box2{
+            background-color: rgb(25, 233, 29);/* 背景色設定 */
+            margin-top: -10px;/* 上部のマージンを-10pxに設定 */
+            border-radius: 3px; /* ラベルの角丸くする */
+        }
+
+        .box2-inner{
+            background-color: rgb(25, 233, 29);/* 背景色設定 */
+            margin-top: -10px;/* 上部のマージンを-10pxに設定 */
+            border-radius: 3px; /* ラベルの角丸くする */
+        }
+
+
+        .box3{
+            float: left;/* 要素を左に浮かせる */
+            width: 70%;/* 要素の幅を親要素の70%に設定 */
+            padding-left: 50px;/* テキストの左側に余白を入れて調整 */
+            padding-right:50px;/* テキストの右側に余白を入れて調整 */
+            box-sizing: border-box;/* 指定した幅がボーダーとパディングを含む */
+        }
+
+        .box4{
+            float: left;/* 要素を左に浮かせる */
+            width: 30%;/* 要素の幅を親要素の30%に設定 */
+        }
+        
+        #comments{
+            float: center;/* 要素を中央に浮かせる */
+        }
+
+    }
+
+/* サイト名 */
+    .site h1 a{
+        color: #ff00ff;/* 文字色 */
+        text-decoration: navy;/* テキストの下線に色を設定 */
+        display: block; /*独立した要素をまとめた表示設定*/
+        position: relative;/* 要素の位置を相対的に設定 */
+        margin-bottom: -70px/* テキスト下の余白 */
+    }
+
+    .site h1{
+        margin: 0;/* 要素の外側のマージン0にする */
+        font-size: 60px; /* 文字サイズ変更 */
+        font-family: 'Dela Gothic One', sans-serif;/* フォント指定 */
+        font-weight: normal;/* フォントの太さを設定 */
+    }
+
+/* ナビゲーション */
+    .menu ul{
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0;/* 余白指定 */
+        font-family: 'Dela Gothic One', sans-serif;/* フォント指定 */
+        font-weight: normal;/* フォントの太さを設定 */
+        list-style-type: none; /* リストのマーカーを非表示にする */
+    }
+
+
+    .menu li a{
+        display: block; /*独立した要素をまとめた表示設定*/
+        padding: 15px;/* 余白指定 */
+        color: #f3c40a;/* 文字色 */
+        font-size: 30px;/* 文字サイズ変更 */
+        text-decoration: none/* テキストの下線なし */
+    }
+
+    .menu li a:hover{
+        background-color: #ff00ff/* 背景色 */
+    }
+
+    .menu ul:after{
+        content: "";/* 要素の前または後に何も表示させない */
+        display: block; /*独立した要素をまとめた表示設定*/
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+    .menu li{
+        float: left;/* 要素を左に浮かせる */
+        width: auto/* 要素の幅を自動調整 */
+    }
+    
+/* 記事 */
+    .kiji a{
+        text-decoration: none;/* テキストの下線なし */
+        color: #ffa500 /* 文字色 */
+    } 
+
+    .kiji  a:hover{
+        background-color: #f9f1f9/* 背景色 */
+    }
+
+    .kiji h1{
+        margin-top: 0;/* 上の余白を0に設定 */
+        margin-bottom: 20px;/* テキスト下の余白 */
+        font-size: 36px; /* 文字サイズ変更 */
+    }
+
+    .kiji p{
+        margin-top: 0;/* 上の余白を0に設定 */
+        margin-bottom: 20px;/* テキスト下の余白 */
+    }
+
+    .kiji section{
+        color: white/* 文字色 */
+    }
+
+    .kiji img{
+        max-width: 10%;/*画像の大きさを変える*/
+        height: auto;/*要素の幅を設定*/
+    }
+    
+    /* 画像の下線 */
+    .kijisam img{
+        position: relative;/* 要素の位置を相対的に設定 */
+        margin-bottom: 0.2rem;/* テキスト下の余白 */
+        padding: 0.5rem 0rem;/* 余白指定 */
+        color: #353535;/* 文字色 */
+        border-bottom: 4px dashed;
+        font-weight: bold;
+        font-size: 26px; /* 文字サイズ変更 */
+    }
+
+    
+
+/* カテゴリ分類 */
+    
+    .category {
+        margin-bottom: 25px;/*タイトル間隔調整*/
+    } 
+
+    .category ul{
+        margin-top: 10px;/* 上の余白を設定 */
+        padding: 0;/* 余白指定 */
+        list-style: none/*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+    .category li a{ /* アンカー要素 HTMLでリンクを作成するための要素です。 */
+        display: block; /*独立した要素をまとめた表示設定*/
+        margin-right: 5px; /* ラベルの間余白 */
+        padding: 10px 5px; /* ラベルの大きさ調整 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        background-color: aqua; /* ラベルの背景色 */
+        color: #0e0d0d; /* 文字色 */
+        font-size: 15px; /* ラベル自体の大きさ調整 */
+        text-decoration: none/* テキストの下線なし */
+    }
+
+    .category li a:hover{
+        background-color: #ff00ff/* 背景色 */
+    }
+
+    .category ul:after{
+        content: "";/* 要素の前または後に何も表示させない */
+        display: block; /*独立した要素をまとめた表示設定*/
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+    .category li{  /*.category li 要素に float: left; を適用しているため、メニュー項目が横並びに表示 */
+        float: left;/* 要素を左に浮かせる */
+        width: auto/* 要素の幅を自動調整 */
+    }
+
+/* サイドメニュー */
+    .sidemenu{
+        margin-bottom: 30px;/* テキスト下の余白 */
+    }
+
+    .sidemenu ul{
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0;/* 余白指定 */
+        list-style: none/*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+
+    .sidemenu li a{
+        display: block; /*独立した要素をまとめた表示設定*/
+        padding: 5px;/* 余白指定 */
+        color: #000;/* 文字色 */
+        font-size: 14px;/* 文字サイズ変更 */
+        text-decoration: none /* テキストの下線なし */
+        border-bottom double 3px #f1f6fa; /* リンクを線で区切る */
+
+    }
+
+    .sidemenu li a:hover{
+        background-color: #ff00ff/* 背景色 */
+    }
+
+    .sidemenu h1{
+        margin-top: 0;/* 上の余白を0に設定 */
+        margin-bottom: 10px;/* テキスト下の余白 */
+        border-bottom: double 3px #f1f6fa; /* リンクを線で区切る */
+        color: #666666;/* 文字色 */
+        font-size: 18px /* 文字サイズ変更 */
+    }
+
+/* サイド広告メニュー */
+    .sideadvert{
+        margin-bottom: 30px;/* テキスト下の余白 */
+    }
+
+    .sideadvert ul{
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0;/* 余白指定 */
+        list-style: none/*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+
+    .sideadvert li a{
+        display: block; /*独立した要素をまとめた表示設定*/
+        padding: 5px;/* スペース確保 */
+        border-bottom: dotted 1px #eef2f5;  /* 各リンクを点線で区切る */
+        color: #000;/* 文字色 */
+        font-size: 14px;/* 文字サイズ変更 */
+        text-decoration: none /* テキストの下線なし */
+    }
+    .sideadvert li a img{ /* 画像が枠線で囲まれるのを防ぐ<img>のボーダーをnoneに指定 */
+        border: none;/* ボーダーを表示しないように設定 */
+    }
+
+    .sideadvert a:after{
+        content: "";/* 要素の前または後に何も表示させない */
+        display: block; /*独立した要素をまとめた表示設定*/
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+    .sideadvert .text{ /* textというクラスの要素に対して、左に寄せて幅を自動調整し、画像の右側に配置します（マージンを使って画像との間隔を調整します）。 */
+        float: none;/* 要素を浮かせず、通常のフローに戻す */
+        width: auto;/* 要素の幅を自動調整 */
+        margin-left: 60px;/* 左側の余白を設定 */
+        padding-left: 15px /* テキストの左側に余白を入れて調整 */
+    }
+
+    .sideadvert li a:hover{
+        background-color: #ff00ff/* 背景色 */
+    }
+
+    .sideadvert h1{
+        margin-top: 0;/* 上の余白を0に設定 */
+        margin-bottom: 10px;/* テキスト下の余白 */
+        border-bottom: double 3px #eef2f5;
+        color: #666666;/* 文字色 */
+        font-size: 18px/* 文字サイズ変更 */
+    }
+
+/* box4-5カテゴリ分類 */
+    .box4-5 {
+        margin-bottom: 25px/*タイトル間隔調整*/
+    } 
+
+    .box4-5{ /*カテゴリー背景設定*/
+        margin-top: 40px; /*枠の上に40px挿入*/
+        padding: 20px; /*枠内の余白挿入*/
+        background-color: darkorchid;/* 背景色 */
+    }
+
+    .box4-5 h1 { /*カテゴリー見出し設定*/
+        margin-top: 0;/*見出し上下の余白サイズ*/
+        margin-bottom: 10px;/*見出し上下の余白サイズ*/
+        color: orange;/* 文字色 */
+        font-size: 30px;/* 文字サイズ変更 */
+    }
+
+    .box4-5 ul{ /*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0;/* 余白指定 */
+        list-style: none/*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+
+    .box4-5 li a{
+        display: block; /*独立した要素をまとめた表示設定*/
+        margin-right: 5px; /* ラベルの間余白 */
+        padding: 10px 50px; /* ラベルの大きさ調整 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        background-color: aqua; /* ラベルの背景色 */
+        color: #010101; /* 文字色 */
+        font-size: 15px; /* ラベル自体の大きさ調整 */
+        text-decoration: none /*テキストの装飾を指定 下線なし*/
+    }
+
+    .box4-5 li a:hover{
+        background-color: #ff00ff /*カーソルを重ねたときの色設定*/
+    }
+
+    .box4-5 ul:after{
+        content: "";/* 要素の前または後に何も表示させない */
+        display: block; /*独立した要素をまとめた表示設定*/
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+    .box4-5 li{  /*.category li 要素に float: left; を適用しているため、メニュー項目が横並びに表示 */
+        float: left; /*独立した要素の表示設定*/
+        width: 25% /*リンクの横幅を調整*/
+    }
+
+    .box4-5 li a img{ /* img要素に対して、左に寄せて幅60pxで表示します。 */
+        max-width: 100%;/*画像の大きさを変える*/
+        height: auto;/*要素の幅を設定*/
+        border: none/* ボーダーを表示しないように設定 */
+    }
+
+
+    .box4-5 li a .title{ 
+        white-space: nowrap;/*テキストの折り返しを制御*/
+        text-decoration: none /*テキストの装飾を指定 下線なし*/
+    }
+
+
+/* box5カテゴリ分類 */
+    .box5 {
+        margin-bottom: 25px/*タイトル間隔調整*/
+    } 
+
+    .box5{ /*カテゴリー背景設定*/
+        margin-top: 40px; /*枠の上に40px挿入*/
+        padding: 20px; /*枠内の余白挿入*/
+        background-color: darkorchid;/* 背景色 */
+    }
+
+    .box5 h1 { /*カテゴリー見出し設定*/
+        margin-top: 0;/*見出し上下の余白サイズ*/
+        margin-bottom: 0;/*見出し上下の余白サイズ*/
+        color: orange;/* 文字色 */
+        font-size: 30px;/* 文字サイズ変更 */
+    }
+
+    .box5 ul{ /*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0;/* 余白指定 */
+        list-style: none/*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+
+    .box5 li a{
+        margin-top: 10px;/*トップ間隔*/
+        display: block; /*独立した要素をまとめた表示設定*/
+        margin-right: 5px; /* ラベルの間余白 */
+        padding: 10px 5px; /* ラベルの大きさ調整 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        background-color: aqua; /* ラベルの背景色 */
+        color: #010101; /* 文字色 */
+        font-size: 15px; /* ラベル自体の大きさ調整 */
+        text-decoration: none /*テキストの装飾を指定 下線なし*/
+    }
+
+    .box5 li a:hover{
+        background-color: #ff00ff /*カーソルを重ねたときの色設定*/
+    }
+
+    .box5 ul:after{
+        content: "";/* 要素の前または後に何も表示させない */
+        display: block; /*独立した要素をまとめた表示設定*/
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+    .box5 li{  /*.category li 要素に float: left; を適用しているため、メニュー項目が横並びに表示 */
+        float: left; /*独立した要素の表示設定*/
+        width: 25% /*リンクの横幅を調整*/
+    }
+
+    .box5 a img{ /* img要素に対して、左に寄せて幅60pxで表示します。 */
+        max-width: 100%;/*画像の大きさを変える*/
+        height: auto;/*要素の幅を設定*/
+        border: none/* ボーダーを表示しないように設定 */
+    }
+
+
+/* コピーライト */
+    .copyright{
+        margin: 0;/* 要素の外側のマージン0にする */
+        color: rgb(0, 0, 0);/* 文字色 */
+        font-size: 20px;/* 文字サイズ変更 */
+        text-align: center/* ページネーションを中央揃えにする */
+    }
+
+/* 謎の線を消す */
+    .copyright-inner{
+        padding-left: 0px;/* テキストの左側余白調整 */
+    }
+
+/* 記事一覧タイトル下線を消す */
+    .kiji h1 a {
+        text-decoration: none /* テキストの下線なし */
+    }
+
+/* 記事一覧ポスト */
+    * {
+        word-break: break-all;/* 単語を途中で切って改行する */
+    }
+
+    #posts h1{
+        color: orange;/* 文字色 */
+    }
+
+    #posts ul{ 
+        margin: 0;/* 要素の外側のマージン0にする */
+        padding: 0px; /* 要素の全四辺のマージン領域を設定 */
+        list-style: none /*標準で挿入される黒丸のリストマークと余白を削除する設定*/
+    }
+
+    #posts li {
+        height: 90px; /* リスト項目の高さを90pxに設定 */
+        padding-bottom: 10px;/* 要素の下部に余白を確保します */
+        line-height: 1.2; /* テキスト行の高さを1.2倍の値に設定テキストの垂直方向の中央揃えが行われる */
+        min-height: 100px; /* リスト項目の最小の高さを100pxに設定 */
+        text-align: left;/* テキストを左寄せに設定 */
+     }    
+     
+    #posts li img {
+        float: left;/* 要素を左に浮かせる *//* 文字を右に独立させる */
+        margin-bottom: 5px;/* テキスト下の余白 */
+        margin-right: 5px;/* ラベルの間余白 */
+    }    
+       
+    #posts ul a {
+        text-decoration: none; /* テキストの下線なし */
+        color: orange/* 文字色 */
+    }
+
+    #posts ul title {
+        background-color: deeppink;/* 背景色 */
+    }
+
+/* 記事用のサムネイルをフルで表示 */
+    .kijisam img  {
+        max-width: 100%;/*画像の大きさを変える*/
+        height: auto;/*要素の幅を設定*/
+    }
+
+
+/* ページ別リンク */
+    .pagination .page-numbers{
+        text-align: center; /* ページネーションを中央揃えにする */
+        text-decoration: none /* テキストの下線なし */
+    }
+
+    .pagination .page-numbers li{
+        display: inline-block; /* ページネーションを横並びにする */
+        margin-top: 20px; /* ページネーションとコンテンツの間にスペースを追加 */
+        font-weight: bold; /* 現在のページ番号を太字にする */
+    }
+
+    .pagination .page-numbers li a{
+        padding: 10px 20px; /* ラベルの大きさ調整 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        background-color: aqua; /* ラベルの背景色 */
+ 
+    }
+
+    .pagination .page-numbers li .current{
+        padding: 10px 20px; /* ラベルの大きさ調整 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        background-color: aqua; /* ラベルの背景色 */
+        text-decoration: none /*テキストの装飾を指定 下線なし*/
+    }    
+
+/* 検索バー */
+    .search-form {
+        margin-top: 10px;/* 上の余白を設定 */
+    }
+    
+    .search-field {
+        padding: 8px;/* 余白指定 */
+        width: 200px;/* 要素の幅を調整 */
+    }
+    
+    .search-submit {
+        padding: 8px 15px;/* 余白指定 */
+        background-color: aqua;/* 背景色 */
+        border-radius: 3px; /* ラベルの角丸くする */
+        color: #060000;/* 文字色 */
+        border: none;/* ボーダーを表示しないように設定 */
+        cursor: pointer;/* カーソルをクリック可能に変更する */
+    }
+    
+    .search-submit:hover {
+        background-color: #ff00ff /*カーソルを重ねたときの色設定*/
+    }
+    
+/* コメント入力欄 */
+    #respond label{
+        display:block;/*独立した要素をまとめた表示設定*/
+    }
+    /* 入力のフォーム部分を横幅いっぱいに広げる */
+    #respond input,
+    #respond textarea{
+        width: 70%;/* 要素の幅を調整 */
+    }
+    /* ボタンの横幅を初期値に戻す */
+    #respond input[type="submit"]{
+        width: auto;/* 要素の幅を自動調整 */
+    }
+    /* ワードプレスが勝手につけるクラス。より：のみを囲んでいるspanタグのクラス */
+    .says{
+        display:none;/* 要素を非表示にし、レイアウトからも削除する */
+    }
+    /* ワードプレスが勝手につけるクラス。投稿者名、投稿日時を囲んでいるdiv要素に付けられているクラスを改行 */
+    .comment-author,
+    .comment-meta{
+        display:inline-block;/* 要素をインラインブロックとして表示  */
+    }
+
+  
+/* メールフォーム*/
+    .mail{
+        background-color:Yellow;/* 背景色 */
+    }
+    /* タイトルサイズ */
+    .mail h1{
+        text-align:-webkit-center/* ページネーションを中央揃えにする */
+    }
+    /* 文字サイズ */
+    .mail label{
+        font-size:15px;/* 文字サイズ変更 */
+    }
+    /* メールフォームの位置 */
+    .mailform{
+        text-align:center;/* ページネーションを中央揃えにする */
+    }
+    /* 送信ボタンサイズ */
+    .wpcf7 input[type=submit]{
+        margin-bottom:20px;/* テキスト下の余白 */
+        padding: 10px 40px;/* 余白指定 */
+        font-size: 15px;/* 文字サイズ変更 */
+    }
+    /* 入力フォームサイズ */
+    .wpcf7 input[type=text],input[type=email],textarea{
+        width:400px;/* 要素の幅を調整 */
+        height:30px;/* 要素の高さを調整 */
+    }
+
+
+/* メディアクエリー,画面幅が599ピクセル以下の場合にスタイルを適用する条件 */
+@media (max-width: 599px) {
+
+
+    .box1 .box2 {
+        width: 50px; /* 例えば50pxに縮小する */
+        height: 50px; /* 例えば高さも50pxにする */
+        /* 他にも適切なスタイルを追加してください */
+      }
+
+    .box1 .site  img {
+        width: 100%; /* 画像を親要素（.box）の幅に合わせる */
+        height: auto; /* 高さを自動調整して画像が歪まないようにする */    
+    
+    }
+
+    .box2-inner{
+        background-color: rgb(25, 233, 29);/* 背景色 */
+        margin-top: -10px;/* 上の余白をマイナスに設定 */
+        border-radius: 3px; /* ラベルの角丸くする */
+    }
+
+
+    .box4-5{
+        padding: 10px;/* 余白指定 */
+    }
+
+    .box4-5 li{
+        width: 50%;/* 要素の幅を調整 */
+    }
+
+    .box4-5 li :nth-child(3) {
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+
+
+    .box5{
+        padding: 10px;/* 余白指定 */
+    }
+
+    .box5 li{
+        width: 50%;/* 要素の幅を調整 */
+    }
+
+    .box5 li :nth-child(3) {
+        clear: both/* 要素が浮かんでいる要素と重ならない */
+    }
+    
+}
+
+/* 600px以上の時に適用する設定 */
+@media (min-width: 600px) {
+    .box1 .box2 {
+        width: 50px; /* 例えば50pxに縮小する */
+        height: 50px; /* 例えば高さも50pxにする */
+        /* 他にも適切なスタイルを追加してください */
+      }
+
+    .box1 .site  img {
+        width: 100%; /* 画像を親要素（.box）の幅に合わせる */
+        height: 500px; /* 高さを自動調整して画像が歪まないようにする */    
+    
+    }
+
+    .box2-inner{
+        background-color: rgb(25, 233, 29);/* 背景色 */
+        margin-top: -10px;/* 上の余白をマイナスに設定 */
+        border-radius: 3px; /* ラベルの角丸くする */
+    }
+
+}
+
+/* 768px以上の時に適用する設定 */
+@media (min-width: 768px) {
+    
+}
+
+/* 1040px以上の時に適用する設定 */
+@media (min-width: 1040px) {
+    /* 全体の横幅を固定  */
+    .box1,.box2,.boxA,.box2-inner,.box5,.box4-5,#comments,.mail,.copyright-inner{
+     width: 1000px;/* 要素の幅を調整 */
+     margin-left: auto;/* 左側の余白を設定 */
+     margin-right: auto/* ラベルの間余白 */
+    }
+ }
+
