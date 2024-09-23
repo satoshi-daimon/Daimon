@@ -13,7 +13,7 @@
     <header>
         <div class="box1">
             <div class="site">
-                <h1><a href="" style="text-decoration:none;">旅ブログ</a></h1>
+                <h1><a href="<?php echo home_url();?>" style="text-decoration:none;">旅ブログ</a></h1>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/IMG_0432.JPG" alt="" width="1000" height="500">
             </div>
         </div>
